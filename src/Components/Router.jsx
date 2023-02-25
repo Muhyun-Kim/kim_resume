@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "../Home";
+import Home from "../Router/Home";
 import Nav from "./Nav";
 import "../index.css";
-import Resume from "../Resume";
-import Project from "../Project";
-import Contact from "../Contact";
+import Resume from "../Router/Resume";
+import Project from "../Router/Project";
+import Contact from "../Router/Contact";
 
 function AppRouter() {
   return (
