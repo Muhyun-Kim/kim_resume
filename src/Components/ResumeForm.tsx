@@ -10,8 +10,8 @@ function ResumeForm({ period, title, detail }: Props) {
   return (
     <>
       <div>{period}</div>
-      <div>
-        <div>{title}</div>
+      <div className="mb-6">
+        <div className="font-extrabold">{title}</div>
         <div>{detail}</div>
       </div>
     </>

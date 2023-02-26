@@ -6,6 +6,7 @@ import "../index.css";
 import Resume from "../Router/Resume";
 import Project from "../Router/Project";
 import Contact from "../Router/Contact";
+import Footer from "./Footer";
 
 function AppRouter() {
   return (
@@ -18,6 +19,7 @@ function AppRouter() {
           <Route path="/project" element={<Project />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );

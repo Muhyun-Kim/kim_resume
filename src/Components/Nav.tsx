@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Nav() {
   return (
     <>
-      <ul className="flex justify-between w-11/12 h-10 items-center">
+      <ul className="flex justify-between w-11/12 h-10 items-center fixed">
         <div>
           <li>
             <Link to="/">Muhyun Kim</Link>
