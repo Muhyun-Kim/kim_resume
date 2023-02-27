@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 function Nav() {
   return (
     <>
-      <ul className="flex justify-between w-11/12 h-10 items-center fixed">
+      <ul className="flex justify-between w-11/12 h-10 items-center fixed top-0 z-10 bg-gray-100">
         <div>
-          <li>
+          <li className="text-xl font-black">
             <Link to="/">Muhyun Kim</Link>
           </li>
         </div>
