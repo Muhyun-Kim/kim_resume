@@ -1,15 +1,20 @@
 import React from "react";
 import PageTitle from "../Components/PageTitle";
+import ProjectForm from "../Components/ProjectForm";
 
 function Project() {
   return (
     <>
-      <div className="flex flex-col items-center w-11/12 my-32">
+      <div className="flex flex-col items-center w-11/12 mt-32">
         <PageTitle title="Project" />
         {/** first project */}
-        <div className="flex mt-20 border-b-2 px-20 w-full">
-          <div className="w-1/2"></div>
-        </div>
+        <ProjectForm
+          projectName={"DRINKER"}
+          projectDetail={"カクテルの写真と説明を投稿するアプリ"}
+          appLink={"https://muhyun-kim.github.io/drinker_app/"}
+          sourceLink={"https://github.com/Muhyun-Kim/drinker_app"}
+          projectImg={"../firstProject.png"}
+        />
       </div>
     </>
   );
