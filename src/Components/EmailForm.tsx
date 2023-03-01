@@ -1,78 +1,77 @@
 import React, { useRef, useState } from "react";
+import emailjs from "emailjs-com";
 
 function EmailForm() {
-  const [input, setInput] = useState({
-    sender: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const senderRef = useRef(null);
-  const emailRef = useRef(null);
-  const subjectRef = useRef(null);
-  const messageRef = useRef(null);
-
-  const handleSubmit = (e) => {
+  const form = React.useRef(null);
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formData = {
-      sender: senderRef.current.value,
-      email: emailRef.current.value,
-      subject: subjectRef.current.value,
-      message: messageRef.current.value,
-    };
+
+    emailjs
+      .sendForm(
+        "service_oyahufq",
+        "template_tqycy2p",
+        e.currentTarget,
+        "LWgHf8s0pcdYjtQBS"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
+
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <div className="flex flex-col w-5/12">
-          <label htmlFor="email">Email</label>
-          <input
-            className="border border-current bg-gray-100"
-            id="email"
-            type="email"
-            ref={emailRef}
-            required
-          />
-        </div>
-        <div className="flex">
-          <div className="flex flex-col w-5/12 mr-3">
-            <label htmlFor="name">Name</label>
-            <input
-              className="border border-current bg-gray-100"
-              id="name"
-              type="text"
-              ref={senderRef}
-              required
-            />
-          </div>
-          <div className="flex flex-col w-5/12">
-            <label htmlFor="subject">Subject</label>
-            <input
-              className="border border-current bg-gray-100"
-              id="subject"
-              type="text"
-              ref={subjectRef}
-              required
-            />
-          </div>
-        </div>
-        <div className="flex">
-          <div className="flex flex-col w-5/12 mr-3">
-            <label htmlFor="message">Message</label>
-            <textarea
-              className="border border-current h-40 bg-gray-100"
-              id="message"
-              ref={messageRef}
-              required
-            ></textarea>
-          </div>
-          <div className="flex justify-center w-5/12 mt-8">
-            <div className="flex justify-centerw h-40 w-40 bg-orange-400 border border-current rounded-full">
-              <button type="submit" className="w-full text-2xl font-black">
-                Submit
-              </button>
+      <form ref={form} onSubmit={sendEmail}>
+        <div className="flex mb-4">
+          <div className="flex flex-col justify-between">
+            <div className="flex flex-col w-11/12">
+              <label>メールアドレス</label>
+              <input
+                className="border border-current bg-gray-100"
+                type="email"
+                name="user_email"
+                required
+              />
             </div>
+            <div className="flex flex-col w-11/12">
+              <label>お名前</label>
+              <input
+                className="border border-current bg-gray-100"
+                type="text"
+                name="user_name"
+                required
+              />
+            </div>
+            <div className="flex flex-col w-11/12">
+              <label htmlFor="subject">件名</label>
+              <input
+                className="border border-current bg-gray-100"
+                name="subject"
+                type="text"
+                required
+              />
+            </div>
+          </div>
+          <div>
+            <label htmlFor="message">本文</label>
+            <input
+              className="border border-current h-40 w-full bg-gray-100"
+              name="message"
+              required
+            ></input>
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <div className="flex justify-center h-14 w-full bg-orange-400 border border-current rounded-full">
+            <input
+              type="submit"
+              value="Submit"
+              className="w-full text-2xl font-black"
+            ></input>
           </div>
         </div>
       </form>
