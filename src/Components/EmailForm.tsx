@@ -8,10 +8,10 @@ function EmailForm() {
 
     emailjs
       .sendForm(
-        "service_oyahufq",
-        "template_tqycy2p",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_SERVICE_TEMPLATE_ID,
         e.currentTarget,
-        "LWgHf8s0pcdYjtQBS"
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
         (result) => {
