@@ -26,7 +26,7 @@ function EmailForm() {
   return (
     <>
       <form ref={form} onSubmit={sendEmail}>
-        <div className="flex mb-4">
+        <div className="flex mb-4 max-md:flex-col">
           <div className="flex flex-col justify-between">
             <div className="flex flex-col w-11/12">
               <label>メールアドレス</label>
@@ -59,14 +59,14 @@ function EmailForm() {
           <div>
             <label htmlFor="message">本文</label>
             <input
-              className="border border-current h-40 w-full bg-gray-100"
+              className="border border-current h-40 w-full bg-gray-100 max-md:w-11/12"
               name="message"
               required
             ></input>
           </div>
         </div>
-        <div className="flex justify-center">
-          <div className="flex justify-center h-14 w-full bg-orange-400 border border-current rounded-full">
+        <div className="flex justify-center max-md:justify-start">
+          <div className="flex justify-center h-14 w-full bg-orange-400 border border-current rounded-full max-md:w-11/12">
             <input
               type="submit"
               value="Submit"

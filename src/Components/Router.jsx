@@ -7,6 +7,7 @@ import Resume from "../Router/Resume";
 import Project from "../Router/Project";
 import Contact from "../Router/Contact";
 import Footer from "./Footer";
+import MobileNav from "./MobileNav";
 
 function AppRouter() {
   return (
@@ -18,6 +19,7 @@ function AppRouter() {
           <Route path="/resume" element={<Resume />} />
           <Route path="/project" element={<Project />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/nav" element={<MobileNav />} />
         </Routes>
         <Footer />
       </BrowserRouter>

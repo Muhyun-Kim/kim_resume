@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 function Nav() {
   return (
@@ -10,16 +12,21 @@ function Nav() {
             <Link to="/">Muhyun Kim</Link>
           </li>
         </div>
-        <div className="flex justify-between w-52">
+        <div className="flex justify-between w-52 max-md:hidden">
           <li>
             <Link to="/resume">Resume</Link>
           </li>
-          <li >
+          <li>
             <Link to="/project">Project</Link>
           </li>
           <li>
             <Link to="/contact">Contact</Link>
           </li>
+        </div>
+        <div className="md:hidden">
+          <Link to="/nav">
+            <FontAwesomeIcon icon={faBars} className="text-xl" />
+          </Link>
         </div>
       </ul>
     </>

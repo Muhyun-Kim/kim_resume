@@ -6,7 +6,7 @@ interface Props{
 
 function PageTitle({title}:Props) {
   return (
-    <div className="w-full px-20">
+    <div className="flex w-full px-20 max-md:p-0">
       <span className="self-start font-bold text-3xl">{title}</span>
     </div>
   );

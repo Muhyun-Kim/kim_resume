@@ -5,14 +5,14 @@ import PageTitle from "../Components/PageTitle";
 function Resume() {
   return (
     <>
-      <div className="flex flex-col items-center w-11/12 my-32">
+      <div className="flex flex-col items-center w-11/12 my-32 max-md:mt-16 max-md:mb-0">
         <PageTitle title="Resume" />
         {/** education */}
-        <div className="flex mt-20 border-b-2 px-20 w-full">
+        <div className="flex mt-20 border-b-2 px-20 w-full max-md:flex-col max-md:mt-10 max-md:p-0">
           <div className="w-1/2">
             <span className="font-extrabold text-xl">Education</span>
           </div>
-          <div>
+          <div className="max-md:mt-4">
             <ResumeForm
               period="2012.03 - 2015.02"
               title=" Kyungpook National University High School"
@@ -26,11 +26,11 @@ function Resume() {
           </div>
         </div>
         {/** Experience */}
-        <div className="flex mt-8 border-b-2 px-20 w-full">
+        <div className="flex mt-8 border-b-2 px-20 w-full max-md:flex-col max-md:mt-2 max-md:p-0">
           <div className="w-1/2">
             <span className="font-extrabold text-xl">Experience</span>
           </div>
-          <div>
+          <div className="max-md:mt-4">
             <ResumeForm
               period="2022.04 - 2022.09"
               title="株式会社ディーカナル"
@@ -44,15 +44,17 @@ function Resume() {
           </div>
         </div>
         {/** Experience */}
-        <div className="flex mt-8 px-20 w-full">
+        <div className="flex mt-8 px-20 w-full max-md:flex-col max-md:mt-2 max-md:p-0">
           <div className="w-1/2">
             <span className="font-extrabold text-xl">Skill</span>
           </div>
-          <ResumeForm
+          <div className="max-md:mt-4">
+            <ResumeForm
               period={null}
               title={null}
               detail="HTML, CSS, JS, TS, React, tailwindCSS"
             />
+          </div>
         </div>
       </div>
     </>
