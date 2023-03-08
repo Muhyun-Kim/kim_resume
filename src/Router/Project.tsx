@@ -5,7 +5,7 @@ import ProjectForm from "../Components/ProjectForm";
 function Project() {
   return (
     <>
-      <div className="flex flex-col items-center w-11/12 mt-32">
+      <div className="flex flex-col items-center w-11/12 mt-32 max-md:my-16">
         <PageTitle title="Project" />
         {/** first project */}
         <ProjectForm

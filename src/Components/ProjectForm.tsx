@@ -16,8 +16,8 @@ function ProjectForm({
   projectImg,
 }: Props) {
   return (
-    <div className="flex mt-20 px-20 w-full">
-      <div className="flex flex-col w-1/2 pb-4">
+    <div className="flex mt-20 px-20 w-full max-md:mt-10 max-md:flex-col max-md:px-0">
+      <div className="flex flex-col w-1/2 pb-4 max-md:w-full">
         <div className="h-1/2">
           <p className="font-extrabold text-xl mb-2">{projectName}</p>
           <p className=" pr-2">{projectDetail}</p>
@@ -35,7 +35,7 @@ function ProjectForm({
           </span>
         </div>
       </div>
-      <div className="w-1/2">
+      <div className="w-1/2 max-md:w-full">
         <img src={projectImg} className="w-full" />
       </div>
     </div>

@@ -5,7 +5,7 @@ import PageTitle from "../Components/PageTitle";
 function Resume() {
   return (
     <>
-      <div className="flex flex-col items-center w-11/12 my-32 max-md:mt-16 max-md:mb-0">
+      <div className="flex flex-col items-center w-11/12 my-32 max-md:my-16">
         <PageTitle title="Resume" />
         {/** education */}
         <div className="flex mt-20 border-b-2 px-20 w-full max-md:flex-col max-md:mt-10 max-md:p-0">

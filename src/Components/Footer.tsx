@@ -20,7 +20,7 @@ function Footer() {
   };
   return (
     <>
-      <ul className="flex justify-between w-11/12 h-24 px-4 border-t-2 items-center md:fixed bottom-0 z-10 bg-gray-100 max-md:mt-6 max-md:h-12">
+      <ul className="flex justify-between w-11/12 h-24 px-4 border-t-2 items-center fixed bottom-0 z-10 bg-gray-100 max-md:mt-6 max-md:h-12">
         <li className="flex flex-col items-center">
           <FontAwesomeIcon
             icon={faLine}
@@ -49,10 +49,10 @@ function Footer() {
             />
           </div>
         </li>
-        <li>
+        <li className="md:hidden">
           <FontAwesomeIcon
             icon={faTwitter}
-            className="md:hidden max-md:text-xl"
+            className="max-md:text-xl"
             onClick={twitterClick}
           />
         </li>

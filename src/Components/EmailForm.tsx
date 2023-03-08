@@ -26,9 +26,9 @@ function EmailForm() {
   return (
     <>
       <form ref={form} onSubmit={sendEmail}>
-        <div className="flex mb-4 max-md:flex-col">
-          <div className="flex flex-col justify-between">
-            <div className="flex flex-col w-11/12">
+        <div className="flex justify-between mb-4 max-md:flex-col">
+          <div className="flex flex-col justify-between md:w-5/12">
+            <div className="flex flex-col">
               <label>メールアドレス</label>
               <input
                 className="border border-current bg-gray-100"
@@ -37,7 +37,7 @@ function EmailForm() {
                 required
               />
             </div>
-            <div className="flex flex-col w-11/12">
+            <div className="flex flex-col">
               <label>お名前</label>
               <input
                 className="border border-current bg-gray-100"
@@ -46,7 +46,7 @@ function EmailForm() {
                 required
               />
             </div>
-            <div className="flex flex-col w-11/12">
+            <div className="flex flex-col">
               <label htmlFor="subject">件名</label>
               <input
                 className="border border-current bg-gray-100"
@@ -56,7 +56,7 @@ function EmailForm() {
               />
             </div>
           </div>
-          <div>
+          <div className="md:w-6/12">
             <label htmlFor="message">本文</label>
             <input
               className="border border-current h-40 w-full bg-gray-100 max-md:w-11/12"
