@@ -1,18 +1,17 @@
-import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "../Router/Home";
-import Nav from "./Nav";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import "../index.css";
-import Resume from "../Router/Resume";
-import Project from "../Router/Project";
 import Contact from "../Router/Contact";
+import Home from "../Router/Home";
+import Project from "../Router/Project";
+import Resume from "../Router/Resume";
 import Footer from "./Footer";
 import MobileNav from "./MobileNav";
+import Nav from "./Nav";
 
 function AppRouter() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -22,7 +21,7 @@ function AppRouter() {
           <Route path="/nav" element={<MobileNav />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
