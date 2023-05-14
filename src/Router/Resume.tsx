@@ -39,7 +39,7 @@ function Resume() {
             <ResumeForm
               period="2015.04 - Present"
               title="株式会社ウェブエッジ"
-              detail="職種 : dbエンジニア(oracle)"
+              detail="職種 : 基盤運用保守エンジニア"
             />
           </div>
         </div>
@@ -52,7 +52,7 @@ function Resume() {
             <ResumeForm
               period={null}
               title={null}
-              detail="HTML, CSS, JS, TS, React, tailwindCSS"
+              detail="HTML, CSS, JS, TS, React, tailwindCSS, Flutter"
             />
           </div>
         </div>
