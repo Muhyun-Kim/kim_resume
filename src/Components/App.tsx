@@ -3,10 +3,8 @@ import AppRouter from "./Router";
 
 function App() {
   return (
-    <div className="App">
-      <div className="flex flex-col items-center mx-4">
-        <AppRouter />
-      </div>
+    <div className="App min-h-screen flex flex-col">
+      <AppRouter />
     </div>
   );
 }

@@ -10,19 +10,21 @@ import Nav from "./Nav";
 
 function AppRouter() {
   return (
-    <>
-      <HashRouter>
+    <HashRouter>
+      <div className="flex flex-col min-h-screen">
         <Nav />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/project" element={<Project />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/nav" element={<MobileNav />} />
-        </Routes>
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/project" element={<Project />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/nav" element={<MobileNav />} />
+          </Routes>
+        </main>
         <Footer />
-      </HashRouter>
-    </>
+      </div>
+    </HashRouter>
   );
 }
 
